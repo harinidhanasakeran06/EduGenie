@@ -1,0 +1,302 @@
+css
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  color: #1f2937;
+  background: #f3f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef3ff, #f8fafc);
+}
+
+/* Main Container */
+.container {
+  width: min(1080px, 94%);
+  margin: 0 auto;
+  padding: 50px 0 30px;
+}
+
+/* Header */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #5367d8;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(42px, 7vw, 68px);
+  line-height: 1;
+  letter-spacing: -2px;
+  color: #18233b;
+}
+
+.hero p:not(.eyebrow) {
+  color: #68748a;
+  max-width: 700px;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+/* Status */
+.status-dot {
+  background: #ffffff;
+  color: #4560c9;
+  padding: 11px 17px;
+  border: 1px solid #d8dfef;
+  border-radius: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 5px 18px rgba(40, 55, 90, 0.08);
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border: 1px solid #dce3ee;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(42, 55, 85, 0.08);
+  margin-bottom: 24px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 750;
+  margin: 0 0 10px;
+  color: #27334a;
+}
+
+label + select,
+select + label,
+textarea + .actions {
+  margin-top: 22px;
+}
+
+/* Select and Textarea */
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #ccd5e3;
+  border-radius: 10px;
+  padding: 14px 15px;
+  font: inherit;
+  color: #27334a;
+  background: #f8fafc;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+select {
+  min-height: 48px;
+}
+
+select:focus,
+textarea:focus {
+  border-color: #586dd6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(88, 109, 214, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 210px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 13px;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 24px;
+  background: #5267d6;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #4056c4;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+button.secondary {
+  background: #e8edf5;
+  color: #354158;
+}
+
+button.secondary:hover {
+  background: #dce3ee;
+}
+
+/* Result */
+.result-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e3e8f0;
+}
+
+h2 {
+  margin: 0;
+  color: #1d2940;
+  font-size: 22px;
+}
+
+#resultType {
+  color: #65718a;
+  font-size: 13px;
+  background: #f0f3f8;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.result {
+  white-space: pre-wrap;
+  line-height: 1.8;
+  color: #354158;
+  padding-top: 10px;
+}
+
+.result strong {
+  color: #18233b;
+}
+
+/* Quiz */
+.quiz-question {
+  border-top: 1px solid #e5e9f0;
+  padding: 20px 0;
+}
+
+.quiz-question:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.quiz-question h3 {
+  margin: 0 0 13px;
+  font-size: 17px;
+  color: #27334a;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #f4f6fa;
+  color: #303c52;
+  margin: 9px 0;
+  border: 1px solid #e0e5ed;
+}
+
+.option:hover {
+  background: #e9edf5;
+}
+
+.option.correct {
+  background: #e8f7ee;
+  color: #17663a;
+  border-color: #b9dfc8;
+}
+
+.option.wrong {
+  background: #fff0f0;
+  color: #a33131;
+  border-color: #f0c7c7;
+}
+
+.explanation {
+  color: #68748a;
+  font-size: 14px;
+  margin: 9px 0 0;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Error */
+.error {
+  color: #a33131;
+  background: #fff2f2;
+  border: 1px solid #f0cccc;
+  border-radius: 9px;
+  padding: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #7a8496;
+  padding: 18px;
+  font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .container {
+    width: 92%;
+    padding-top: 28px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status-dot {
+    align-self: flex-start;
+  }
+
+  .card {
+    padding: 21px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
